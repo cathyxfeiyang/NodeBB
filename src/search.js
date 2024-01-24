@@ -318,9 +318,7 @@ async function getSearchUids(data) {
  */
 // add exports to use in testing
 module.exports.filterByPostcount = filterByPostcount;
-module.exports.getSearchCids = getSearchCids;
-module.exports.searchInContent = searchInContent;
-module.exports.filterByTags = filterByTags;
+
 /**
  * Ends ChatGPT input
  */

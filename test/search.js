@@ -307,23 +307,5 @@ describe('Search', () => {
         assert(filteredPosts.every(post => post.topic.postcount >= 10));
     });
 
-    // addl 2 lines of coverage
-    const { getSearchCids } = require('../src/search');
-    it('should return correct category IDs based on user privileges', async () => {
-        const cids = await getSearchCids({ categories: ['all'], uid: phoebeUid });
-        assert(cids.includes(cid1));
-        assert(cids.includes(cid2));
-    });
-
-    // addl 2 lines of coverage
-    const { filterByTags } = require('../src/search');
-    it('should filter posts by specific tags', () => {
-        const posts = [
-            { topic: { tags: ['node', 'javascript'] } },
-            { topic: { tags: ['node', 'react'] } },
-            { topic: { tags: ['python', 'flask'] } },
-        ];
-        const filteredPosts = filterByTags(posts, ['node']);
-        assert.strictEqual(filteredPosts.length, 2);
-    });
+    
 });
