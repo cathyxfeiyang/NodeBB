@@ -320,6 +320,7 @@ async function getSearchUids(data) {
 module.exports.filterByPostcount = filterByPostcount;
 module.exports.getSearchCids = getSearchCids;
 module.exports.filterByTags = filterByTags;
+module.exports.getSearchUids = getSearchUids;
 /**
  * Ends ChatGPT input
  */

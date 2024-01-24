@@ -323,4 +323,11 @@ describe('Search', () => {
         const filteredPosts = filterByTags(posts, ['node']);
         assert.strictEqual(filteredPosts.length, 2);
     });
+
+    const { getSearchUids } = require('../src/search');
+    it('should return an empty array if postedBy is not provided', async () => {
+        const data = {};
+        const uids = await getSearchUids(data);
+        assert.deepStrictEqual(uids, []);
+    });
 });
