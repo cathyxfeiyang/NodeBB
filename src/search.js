@@ -312,5 +312,8 @@ async function getSearchUids(data) {
     }
     return await user.getUidsByUsernames(Array.isArray(data.postedBy) ? data.postedBy : [data.postedBy]);
 }
-
+module.exports.filterByPostcount = filterByPostcount;
+module.exports.getSearchCids = getSearchCids;
+module.exports.searchInContent = searchInContent;
+module.exports.filterByTags = filterByTags;
 require('./promisify')(search);
